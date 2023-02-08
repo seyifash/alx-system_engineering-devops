@@ -3,3 +3,4 @@ Display current directory contents, including hidden files (starting with .), us
 Display current directory contents in a long format
 Writing a script that changes the working directory to the user’s home directory
 Display the contents list of your current directory
+Display current directory contents
