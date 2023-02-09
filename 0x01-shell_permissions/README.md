@@ -11,3 +11,4 @@ A script that sets the mode of the file hello
 A script that sets the mode of the file hello the same as olleh’s mode
 A script that creates a directory called my_dir with permissions 751 in the working directory.
 A script that changes the group owner to school for the file hello
+A script that changes the owner and group owner of _helloto vincent and staff respectively
