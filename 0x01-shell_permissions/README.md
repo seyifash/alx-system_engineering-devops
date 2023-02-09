@@ -1,1 +1,1 @@
-A script that switches the current user to the user betty
+Ascript that switches the current user to the user betty
