@@ -10,3 +10,4 @@ A script that writes the result of the command ls -la into the file ls_cwd_conte
 A script that duplicates the last line of a file
 A script that deletes all the regular file
 A script that counts the number of directories and sub directories
+a script that displays the 10 newest files in the current directory
