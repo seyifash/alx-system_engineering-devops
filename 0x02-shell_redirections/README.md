@@ -9,3 +9,4 @@ A  shell script that creates a file named exactly
 A script that writes the result of the command ls -la into the file ls_cwd_content
 A script that duplicates the last line of a file
 A script that deletes all the regular file
+A script that counts the number of directories and sub directories
