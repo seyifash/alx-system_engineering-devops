@@ -6,3 +6,4 @@ A script that Display the last 10 lines
 A script that displays the first ten lines of a file
 A script that displays the third line of a file
 A  shell script that creates a file named exactly
+A script that writes the result of the command ls -la into the file ls_cwd_content
