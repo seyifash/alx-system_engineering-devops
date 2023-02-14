@@ -4,3 +4,4 @@
 3- This is a script that counts the number of directory in a file 
 4- This is a script that list environmental variables
 5- This is a script that lists all local variables and environment variables, and functions
+6- This is a script that creates a new local variable
