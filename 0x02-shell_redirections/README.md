@@ -23,3 +23,4 @@ a script that reverse its input
 A script that displays all users and their home directories, sorted by users
 A  command that finds all empty files and directories in the current directory and all sub-directories
  command that finds all empty files and directories in the current directory and all sub-directories
+A script that parses web servers logs 
