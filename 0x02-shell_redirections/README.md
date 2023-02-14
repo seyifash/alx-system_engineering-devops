@@ -17,3 +17,4 @@ A script that Display lines containing the pattern “root” and 3 lines after 
 Display the number of lines that contain the pattern
 A script that Display all the lines in the file /etc/passwd that do not contain the pattern “bin” 
 Display all lines of the
+A script to replace all characters
