@@ -2,3 +2,4 @@
 0- This is a script that creates an alias 
 2- This script Add the file action to the PATH
 3- This is a script that counts the number of directory in a file 
+4- This is a script that list environmental variables
