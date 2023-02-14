@@ -19,3 +19,4 @@ A script that Display all the lines in the file /etc/passwd that do not contain 
 Display all lines of the
 A script to replace all characters
 A  script that removes all letters c and C from input
+a script that reverse its input
