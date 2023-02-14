@@ -20,3 +20,4 @@ Display all lines of the
 A script to replace all characters
 A  script that removes all letters c and C from input
 a script that reverse its input
+A script that displays all users and their home directories, sorted by users
