@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Define the server's IP address
+
+server_ip="34.232.52.128"
+private_key="~/.ssh/school"
+user="ubuntu"
+ssh -i "$private_key" "$user@$server_ip"
