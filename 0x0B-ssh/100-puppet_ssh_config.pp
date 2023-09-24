@@ -1,9 +1,5 @@
-# ensuring ssh config maintains state
-
-file {'/etc/ssh/ssh_config':
-  ensure => present
-}
-
+# connect to a server without password
+#
 file_line {'identity files':
   ensure  => present,
   path    => '/etc/ssh/ssh_config',
