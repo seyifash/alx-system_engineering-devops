@@ -1,16 +1,16 @@
-# using puppet to connect without password
+# ensuring ssh config maintains state
 
-file { '/etc/ssh/ssh_config':
+file {'/etc/ssh/ssh_config':
   ensure => present
 }
 
-file_line { 'identity file':
-  ensure  => present,
-  path    => '/etc/ssh/ssh_config',
-  line    => '    IdentifyFile ~/.ssh/school',
+file_line {'identity files':
+  ensure => present,
+  path   => '/etc/ssh/ssh_config',
+  line   => '    IdentifyFile ~/.ssh/school',
 }
 
-file_line { 'password auth':
+file_line {'password auth':
   ensure => present,
   path   => '/etc/ssh/ssh_config',
   line   => '    PasswordAuthentication no',
