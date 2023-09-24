@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # using puppet to connect without password
 
-class ssh {
-file { '/etc/ssh/sshd_config':
-  ensure  => present,
+ssh_client_config {
+file { ' ~/.ssh/config':
+  ensure  => 'file',
   owner   => 'root',
   group   => 'root',
   mode    => '0600',
-  content => "IdentityFile /root/.ssh/school\nPasswordAuthentication no\n",
+  content => "IdentityFile ~/.ssh/school\nPasswordAuthentication no\n",
 }
 }
