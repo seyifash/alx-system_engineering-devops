@@ -3,7 +3,7 @@
 file_line {'identity files':
   ensure  => present,
   path    => '/etc/ssh/ssh_config',
-  line    => '    IdentifyFile ~/.ssh/school',
+  line    => '    IdentityFile ~/.ssh/school',
 }
 
 file_line {' password auth':
