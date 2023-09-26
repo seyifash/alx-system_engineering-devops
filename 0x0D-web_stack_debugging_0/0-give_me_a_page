@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# start apache so that the container holbertonschool/265-0 can return hello holberton
+service apache2 start
