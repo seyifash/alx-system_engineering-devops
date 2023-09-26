@@ -1,10 +1,14 @@
 # configuring an nginx server using puppet
 
+exec { 'update system':
+  command => '/usr/bin/apt-get update',
+}
 package { 'nginx':
-  ensure => installed,
+  ensure  => 'installed',
+  require => Exec['update system']
 }
 
-file { 'var/www/html/index.html':
+file { '/var/www/html/index.html':
   content => 'Hello World!',
 }
 
