@@ -1,11 +1,11 @@
 # configure to include a custom http header
-exec { 'update sytem':
+exec { 'update system':
   command => '/usr/bin/apt-get update',
 }
 
 package { 'nginx':
   ensure  => 'installed',
-  require => Exec['update system']
+  require => Exec['update system'],
 }
 
 file { '/var/www/html/index.html':
@@ -19,12 +19,14 @@ file_line { 'configs':
   line   => 'rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;',
 }
 
-exec {'HTTP header':
-  command  => sudo sed -i "server_name _;/add_header X-Served-By \"${hostname}\;" /etc/nginx/sites-enabled/default,
-  provider => shell,
+file_line {'HTTP header':
+  ensure => present,
+  path   => '/etc/nginx/sites-enabled/default',
+  after  => 'server_name _;',
+  line   => 'add_header X-Served-By \$hostname;'
 }
 
 service { 'nginx':
   ensure  => running,
-  require => package['nginx'],
+  require => Package['nginx'],
 }
