@@ -4,7 +4,7 @@ exec { 'update sytem':
 }
 
 package { 'nginx':
-  ensure => 'installed',
+  ensure  => 'installed',
   require => Exec['update system']
 }
 
@@ -20,11 +20,11 @@ file_line { 'configs':
 }
 
 exec {'HTTP header':
-  command  => sudo sed -i "server_name _;/a add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-enabled/default,
+  command  => sudo sed -i "server_name _;/add_header X-Served-By \"${hostname}\;" /etc/nginx/sites-enabled/default,
   provider => shell,
 }
 
 service { 'nginx':
-  ensure => running,
+  ensure  => running,
   require => package['nginx'],
 }
