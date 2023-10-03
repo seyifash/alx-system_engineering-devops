@@ -19,11 +19,9 @@ file_line { 'configs':
   line   => 'rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;',
 }
 
-file_line { 'HTTP header':
-  ensure => present,
-  path   => '/etc/nginx/sites-enabled/default',
-  after  => 'server_name _;',
-  line   => 'add_header X-Served-By \$hostname;',
+exec {'HTTP header':
+  command  => sudo sed -i "server_name _;/a add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-enabled/default,
+  provider => shell,
 }
 
 service { 'nginx':
