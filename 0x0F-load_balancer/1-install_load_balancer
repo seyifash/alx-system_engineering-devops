@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+installs, configures, and starts the load balancer
+sudo apt-get update
