@@ -5,7 +5,7 @@ exec { 'update system':
 
 package { 'nginx':
   ensure  => 'installed',
-  require => Exec['update system'],
+  require => Exec['update system']
 }
 
 file { '/var/www/html/index.html':
@@ -23,7 +23,7 @@ file_line {'HTTP header':
   ensure => present,
   path   => '/etc/nginx/sites-enabled/default',
   after  => 'server_name _;',
-  line   => 'add_header X-Served-By \$hostname;'
+  line   => 'add_header X-Served-By \$hostname;',
 }
 
 service { 'nginx':
