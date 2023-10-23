@@ -16,10 +16,10 @@ if __name__ == "__main__":
             do_req = requests.get('{}/todos'.format(REST_API)).json()
             filename = "{}.csv".format(e_id)
             with open(filename, mode='w', newline='') as csv_file:
-                csv_writer = csv.writer(csv_file)
+                csv_writer = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
                 for task in do_req:
                     if task.get("userId") == e_id:
-                        csv_writer.writerow([emp_req["id"],
+                        csv_writer.writerow([task["userId"],
                                             emp_req["username"],
                                             task["completed"],
                                             task["title"]])
