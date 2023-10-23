@@ -19,7 +19,7 @@ if __name__ == "__main__":
                 csv_writer = csv.writer(csv_file)
                 for task in do_req:
                     if task.get("userId") == e_id:
-                        csv_writer.writerow([task["userId"],
+                        csv_writer.writerow([emp_req["id"],
                                             emp_req["username"],
                                             task["completed"],
                                             task["title"]])
