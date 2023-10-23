@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """Python script that, using this REST API, for a given employee ID
 """
-import sys
 import requests
 import re
+import sys
+
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
