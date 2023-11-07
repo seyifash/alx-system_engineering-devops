@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""get count"""
+"""get count words in hot post"""
 import requests
 
 
